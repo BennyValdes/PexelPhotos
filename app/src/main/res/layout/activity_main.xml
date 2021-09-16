@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/tv_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's look for a photo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_type_of_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="Type of Photo:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_look_text"
+        app:layout_constraintBottom_toBottomOf="@id/et_look_text"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/et_look_text"
+        android:layout_width="220dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_type_of_photo"
+        app:layout_constraintRight_toLeftOf="@id/button_look"
+        app:layout_constraintTop_toBottomOf="@id/tv_banner"/>
+
+    <Button
+        android:id="@+id/button_look"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="Go"
+        app:layout_constraintLeft_toRightOf="@id/et_look_text"
+        app:layout_constraintTop_toTopOf="@id/et_look_text"
+        app:layout_constraintBottom_toBottomOf="@id/et_look_text"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_look_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
