@@ -27,7 +27,7 @@ class FragmentPhoto: Fragment() {
     private fun getPhotoData() {
         HttpRequest
             .getService()
-            .getPhotos("23408719-4037e6fe68e88ad73a5c30d0b","dogs","photo","popular")
+            .getPhotos("23408719-4037e6fe68e88ad73a5c30d0b","dogs","photo","popular", "vertical")
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(object: Observer<PhotoResponse>{

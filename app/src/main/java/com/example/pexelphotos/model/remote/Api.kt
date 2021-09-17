@@ -12,6 +12,7 @@ interface Api {
         @Query("key") keyValue: String,
         @Query("q") photoType: String,
         @Query("image_type") imageType: String,
-        @Query("order_param") orderParam: String
+        @Query("order_param") orderParam: String,
+        @Query("orientation") orientationParam: String
     ): Observable<PhotoResponse>
 }

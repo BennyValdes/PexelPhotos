@@ -9,5 +9,6 @@ data class Hits(
     val previewURL: String,
     val webformatURL: String,
     val largeImageURL: String,
-    val user: String
+    val user: String,
+    val orientation: String
 )
