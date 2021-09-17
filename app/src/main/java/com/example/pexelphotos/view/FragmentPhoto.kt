@@ -33,14 +33,16 @@ class FragmentPhoto: Fragment() {
             .subscribe(object: Observer<PhotoResponse>{
                 override fun onSubscribe(d: Disposable) {
                     Log.d(TAG, "onSubscribe: ON SUBSCRIBE ERROR")
+                    Toast.makeText(activity, "$", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onNext(t: PhotoResponse) {
                     Log.d(TAG, "onNext: ON NEXT ERROR")
+                    t?.let { Toast.makeText(activity, "$it", Toast.LENGTH_SHORT).show() }
                 }
 
                 override fun onError(e: Throwable) {
-                    Log.d(TAG, "onError: ON ERROR ERROR")
+                    Log.d(TAG, "onError: ON ERROR ERROR",e)
                 }
 
                 override fun onComplete() {
